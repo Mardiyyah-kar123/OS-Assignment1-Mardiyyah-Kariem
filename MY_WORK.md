@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | Mardiyyah Nizaam Kariem |
+| **Student ID** | 445052815 |
+| **University Email** | 445052815@std.psau.edu.sa |
+| **GitHub Username** | Mardiyyah-kar123 |
+| **Repository Link** | https://github.com/Mardiyyah-kar123/OS-Assignment1-Mardiyyah-Kariem |
  
 ---
 
@@ -129,16 +129,30 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 1, 2026, 4:22 PM]
+**What I did**: Created my first repository and forked it, and set my student ID
 
 **Details**:
+- Created a Github account using my student email
+- Created a fork
+- opened the code on VS code
+- change studentID to 445052815
+- I ran the code succefully 
+- Commited : 'Set my student ID: 445052815'
+- Filled in my student information
+- Made my first entry
 
-**Challenges**:
+**Challenges**: 
+- Had internet issues and took a while to run code and make github account
+- Had to reinstall JDK again because my laptop when off 😒
+- learned how to commit and sync 
 
 **Solution**:
+- reset my computer
+- change internet 
+- used Copilot to help me find and show me where to comit and push 
 
-**Time spent**:
+**Time spent**: 7 Hours (Maybe more)
 
 ---
 
