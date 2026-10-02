@@ -156,16 +156,21 @@
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 2, 2026, 1:10 PM]
+**What I did**: Added a priority to the process
 
-**Details**:
+**Details**: 
+- Created a priority variable in the Process class and the constructor
+- Made a priority get method; to access the priority
+- Randomized Priority from 1-10
+- Displayed the priority
 
 **Challenges**:
+No challenges at all, was fairly easy.
 
 **Solution**:
-
-**Time spent**:
+No solutions needed, just patience and thinking.
+**Time spent**: an hour (Maybe less)
 
 ---
 
