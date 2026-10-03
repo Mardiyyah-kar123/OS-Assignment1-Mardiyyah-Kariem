@@ -171,6 +171,8 @@ public class SchedulerSimulation {
         
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
+
+        int  contextSwitchCount = 0; // Counter to track the number of context switches during the simulation
         
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN + 
@@ -255,6 +257,8 @@ public class SchedulerSimulation {
             } catch (InterruptedException e) {
                 System.out.println("Main thread interrupted.");
             }
+
+            contextSwitchCount++; // Increment the context switch counter after each process execution
             
             // Retrieve the process associated with the thread from the map
             Process process = processMap.get(currentThread);
@@ -274,6 +278,9 @@ public class SchedulerSimulation {
                 }
             }
         }
+        // Display the total number of context switches that occurred during the simulation
+        System.out.println(Colors.BRIGHT_YELLOW +
+            "Total Context Switches: " + contextSwitchCount + Colors.RESET + "\n");
         
         // End of the scheduler simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
