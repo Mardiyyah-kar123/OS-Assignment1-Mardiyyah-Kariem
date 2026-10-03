@@ -174,16 +174,20 @@ No solutions needed, just patience and thinking.
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 3, 2026, 1:52 PM]
+**What I did**: Implemented a contextswitch
 
-**Details**:
+**Details**: 
+- Created a contextswitch variable in the main
+- Increment the contextswitch
+- Displayed the Contextswitch
+- Ran the code
 
-**Challenges**:
+**Challenges**: No, problems at all.
 
-**Solution**:
+**Solution**: none
 
-**Time spent**:
+**Time spent**: halh an hour
 
 ---
 
