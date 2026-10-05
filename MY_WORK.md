@@ -191,16 +191,19 @@ No solutions needed, just patience and thinking.
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 5, 2026, 4:41 PM]
+**What I did**: added a waiting track summary 
 
 **Details**:
+- We added a waiting time that tells us how long a process has waited in the ready queue
+- we added a table that displayed the summary(Process, burst time, waiting time, TAT)
+- to get TAT we add a timer from the time the process was created till the end, the we calcuted to get the TAT result
 
-**Challenges**:
+**Challenges**: No challenges
 
-**Solution**:
+**Solution**: none
 
-**Time spent**:
+**Time spent**: 2 hours
 
 ---
 
