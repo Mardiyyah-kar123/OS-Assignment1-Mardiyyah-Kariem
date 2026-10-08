@@ -230,16 +230,22 @@ No solutions needed, just patience and thinking.
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
+### Entry 6 - [October 8, 2026, 12:34 PM]
+**What I did**: Answer the developing question and technical question
 
 **Details**:
+- Answered the nesseccary questions
+- checked everything
 
 **Challenges**:
+the last question in technical question section, i didn't understand it.
+struggled to paste the snippet of my code
 
 **Solution**:
+understood it eventually
+copied the ouput 
 
-**Time spent**:
+**Time spent**: 3 hours
 
 ---
 
@@ -247,13 +253,13 @@ No solutions needed, just patience and thinking.
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: 15 hours
 
-**Most challenging part**:
+**Most challenging part**: Sorting the code
 
-**Most interesting learning**:
+**Most interesting learning**: Understanding the code was suprisingly easy, but the depth of it was challenging, especally finding real world examples
 
-**What I would do differently next time**:
+**What I would do differently next time**: start earlly! do it in the morning better than at night.
 
 ---
 
@@ -268,12 +274,11 @@ No solutions needed, just patience and thinking.
 > 💡 **TIP:** Draft your answer in a few bullet points first, then turn them into sentences.
 
 ## Question 1: What did you learn about multithreading?
-
 > 💡 **TIP:** Talk about thread creation (`Runnable`, `Thread.start()`), waiting with `Thread.join()`, simulating work with `Thread.sleep()`, and what surprised you.
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I learned that multithreading allows a program to use threads to perform tasks during execution. Thread.start() starts a new thread, which then executes the run() method from the Runnable object. Thread.join() makes the main thread wait for the current process to finish its turn before continuing to the next process. Thread.sleep() temporarily pauses the executing thread for a specific amount of time and allows it to continue afterward. From the Round-Robin simulation, I learned how threads can take turns using CPU time instead of one process completing all of its work first. I also learned that if a process does not finish during its time quantum, it can return to the ready queue and get another turn later.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -281,7 +286,7 @@ No solutions needed, just patience and thinking.
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+One of the biggest challenges I faced was understanding the full code because seeing everything at once felt overwhelming. There were many methods and variables that I did not understand at first, such as start(), poll(), join(), and burstTime. I also needed to understand how the Process constructor worked and how all these components connected to each other. The constructor was one of the easier parts for me to understand, but following the entire scheduling process was more difficult. At first, it was hard to understand the code as one complete program because there were many things happening at the same time. After spending more time reviewing it, the structure of the program started to make more sense to me.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -289,7 +294,7 @@ No solutions needed, just patience and thinking.
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I overcame the challenge by breaking the code into smaller pieces instead of trying to understand the whole program at once. I first focused on individual methods and variables and learned what each one was responsible for. When I did not understand something, I asked AI to explain what it did and how it related to the program. I also explained my understanding back in my own words to check whether I understood it correctly. While implementing the three features, I made small changes and tested the program before moving on to the next step. I made sure not to continue until I understood what the code I had added was actually doing.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -297,7 +302,7 @@ No solutions needed, just patience and thinking.
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I think multithreading can be useful in real-world applications such as a web browser. One thread could handle the work for one task while other threads handle different tasks in the browser. For example, I could use one tab while another tab is loading a different website without having to close the first one. A browser could also handle a download while I continue browsing the internet. Multithreading can also be useful when I am typing in a web application while other tasks, such as saving my work or checking spelling, are happening separately. From this assignment, I learned that using threads can help a program manage different tasks while keeping the application responsive.
 
 ### Optional: What would you like to learn more about?
 
@@ -329,7 +334,7 @@ No solutions needed, just patience and thinking.
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process is an independent running program with its own memory space, while a thread is a smaller unit of execution that runs inside a process. Threads within the same process can share memory and resources, while separate processes generally have their own memory spaces. Another difference is that creating a thread requires fewer resources than creating a completely separate process. In this assignment, we used threads because we wanted to simulate multiple processes executing within the same Java program instead of creating completely separate operating-system processes. In SchedulerSimulation.java, each simulated Process implements Runnable, and new Thread(process) creates a thread that can execute that process's run() method. When currentThread.start() is called, the thread begins execution, allowing the scheduler to simulate processes taking turns using the CPU.
 
 ## Question 2: Ready Queue Behavior
 
@@ -341,15 +346,26 @@ No solutions needed, just patience and thinking.
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+In Round-Robin scheduling, when a process does not finish within its time quantum, it is paused and added back to the end of the Ready Queue so it can get another turn later. In my program, P1 had a burst time of 5960 ms and first executed for the 4000 ms time quantum, leaving 1960 ms remaining. P1 was then re-queued once, and when its turn came again, it executed the remaining 1960 ms and finished. Re-queueing makes the scheduling fair because P1 cannot keep using the CPU until it finishes, so the other processes in the Ready Queue also get a turn.
 
 Example from my output:
-```
+  ? P1 executing quantum [4000ms] 
+  ? Quantum progress: [███████████████] 100%
+  ? P1 completed quantum 4000ms │ Overall progress: [█████████████░░░░░░░] 67%
+     Remaining time: 1960ms
+  ? P1 yields CPU for context switch
+
+  ? P1 added to ready queue │ Priority: 2 │ Burst time: 5960ms
+445052815
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P3 ? P4 ? P5 ? P6 ? P7 ? P8 ? P9 ? P10 ? P11 ? P12 ? P13 ? P14 ? P15 ? P16 ? P1]
+└───────────────────────────────────────────────────────────────────────────────
+
 [Paste a relevant snippet from your program output here showing a process being re-queued]
-```
+![P1 re-queue]({CFD2EFA8-6E93-41A8-A845-EA88AE6D2922}.png)
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+As ypu can see P1 time quantum ran out before it can even finish processing, so it went back to ready queue
 
 ## Question 3: Thread Lifecycle
 
@@ -359,15 +375,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: P1's thread is in the New state when new Thread(process) creates the thread inside addProcessToQueue(), but the thread has not started yet.
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: When currentThread.start() is called, P1 becomes Runnable and is ready to execute its run() method.
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: P1 can be considered Running when its run() method is executing and it is performing its CPU quantum.
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: During Thread.sleep(stepTime), P1's thread temporarily pauses for a specified time, which technically puts it in TIMED_WAITING state, meanwhile, currentThread.join() causes the main thread to wait for P1, not P1 to wait for the main thread.
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: P1's thread becomes Terminated after its run() method finishes and the thread completes its execution.
 
 ## Question 4: Real-World Applications
 
@@ -377,31 +393,30 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [Interactive Multi-User Desktop CPU Scheduling]
 
 **Description**:
-[Describe the real-world scenario.]
+In a modern desktop operating system (like Linux or Windows), multiple interactive applications—such as a web browser, a text editor, and a background music player—run concurrently as threads managed by the kernel. The OS scheduler uses Round-Robin to distribute CPU execution time among all active, equal-priority threads. In this scenario, each running application thread plays the role of a process, the preemption timer interval represents the time quantum, and saving/restoring thread registers and stack pointers acts as the context switch.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin ensures fairness by preventing CPU-bound tasks from starving I/O-bound interactive programs. It maximizes responsiveness because each thread gets a quick turn at the CPU, keeping user interface interactions (like typing or cursor movement) smooth without noticeable input lag. Furthermore, the predictable time slice offers bounded waiting times, ensuring consistent performance across all active background and foreground tasks.
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Web Server Load Balancing]
 
 **Description**:
-[Describe the real-world scenario or application.]
-
+A high-traffic web server platform uses a Round-Robin load balancer to distribute incoming HTTP client requests across a pool of backend worker threads or servers. In this application, each incoming user request acts as a process, the time or packet budget allocated to process/stream a chunk of data represents the time quantum, and switching the active network socket/handler thread to process the next queued request acts as the context switch.
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin delivers simple, deterministic fairness by guaranteeing every client connection is assigned worker resources equally without complex overhead. It enhances responsiveness for short request-response cycles, ensuring no single heavy web request monopolizes the backend workers while delaying lightweight API calls. The fixed scheduling cycle provides structural predictability, allowing server administrators to estimate max latency and throughput under high request volumes.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.How RR works
+2.Step of a process
+3.Multithreading
 
 **Concepts I need to study more:**
-1.
+1. 
 2.
 
 ---
@@ -430,10 +445,10 @@ Example from my output:
 **This file (`MY_WORK.md`)**
 - [✅] Full name and student ID filled in at the top
 - [✅] Development log has **5+ entries** on different dates
-- [ ] Reflection: 4 questions, 5-7 sentences each
-- [ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
-- [ ] No `[...]` placeholders left
-- [ ] No section headers deleted
+- [✅] Reflection: 4 questions, 5-7 sentences each
+- [✅] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
+- [✅] No `[...]` placeholders left
+- [✅] No section headers deleted
 
 **Video**
 - [✅] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
@@ -441,6 +456,6 @@ Example from my output:
 - [✅] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
 
 **Blackboard**
-- [ ] Submit **only** the link to your public GitHub repository
+- [✅] Submit **only** the link to your public GitHub repository
 
 > 🎯 **Good luck!** Start early, commit regularly, and make sure you can explain every line you submit.
